@@ -1,5 +1,11 @@
- # Sort
+# Sort Algorithm
 练习：Java实现常见排序算法及其算法优化。
+
+# Algorithm Classification
+![算法分类](./算法分类.png "算法分类")
+
+# Algorithm Complexity
+![算法复杂度](./算法复杂度.png "算法复杂度")
 
 # Bubble Sort
 冒泡排序（Bubble Sort）是一种简单的排序算法。
