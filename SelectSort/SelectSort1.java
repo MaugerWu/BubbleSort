@@ -16,30 +16,58 @@ import java.util.Arrays;
  * @date 2018年4月20日  
  * @version 1.0
  */
-public class SelectSort1 {
-
-	public static void main(String[] args) {
-		
+public class SelectSort1
+{
+	public static void main(String[] args)
+	{
 		int[] array = { 4, 22, 1, 100, 132, 20, 9, 67};
-		System.out.println(selectSort(array));
+		System.out.println("原数组： " + Arrays.toString(array));
+		System.out.println("正    序： " + selectSort(array));
+		System.out.println("倒    序： " + reverseOrder(array));
 	}
 	
-	public static String selectSort(int[] arr) {
-		
+	public static String selectSort(int[] arr)
+	{
 		int len = arr.length; // 数组长度
 		int minIndex; // 最小值索引变量
 		int temp; // 暂存变量值
 		
-		for (int i = 0; i < len - 1; i++) {
+		for (int i = 0; i < len - 1; i++)
+		{
 			minIndex = i;
-			for (int j = i + 1; j < len; j++) {
-				if (arr[j] < arr[minIndex]) { // 寻找最小值
+			for (int j = i + 1; j < len; j++)
+			{
+				if (arr[j] < arr[minIndex]) // 寻找最小值
+				{
 					minIndex = j; // 将最小值的索引保存
 				}
 			}
 			temp = arr[i];
 			arr[i] = arr[minIndex];
 			arr[minIndex] = temp;
+		}
+		return Arrays.toString(arr);
+	}
+	
+	public static String reverseOrder(int[] arr)
+	{
+		int len = arr.length;
+		int maxIndex;
+		int temp;
+		
+		for (int i = 0; i < len - 1; i++)
+		{
+			maxIndex = i;
+			for (int j = i + 1; j < len; j++)
+			{
+				if (arr[maxIndex] < arr[j])
+				{
+					maxIndex = j;
+				}
+			}
+			temp = arr[i];
+			arr[i] = arr[maxIndex];
+			arr[maxIndex] = temp;
 		}
 		return Arrays.toString(arr);
 	}
