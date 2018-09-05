@@ -26,6 +26,7 @@ public class SelectSort1
 		System.out.println("倒    序： " + reverseOrder(array));
 	}
 	
+        /* 升序 */
 	public static String selectSort(int[] arr)
 	{
 		int len = arr.length; // 数组长度
@@ -49,6 +50,7 @@ public class SelectSort1
 		return Arrays.toString(arr);
 	}
 	
+        /* 降序 */
 	public static String reverseOrder(int[] arr)
 	{
 		int len = arr.length;
