@@ -51,20 +51,24 @@ public class BubbleSort2 {
 //		long startTime = System.currentTimeMillis(); // 毫秒
 //		long startTime=System.nanoTime(); // 纳秒
 //		System.out.println(startTime);
-		for (int i = 0; i < arr.length - 1; i++) {
-			if (i != 0) {
+		for (int i = 0; i < arr.length - 1; i++)
+		{
+			if (i != 0)
+			{
 				System.out.println("\n第" + (i + 1) + "趟排序");
-			}
-			else {
+			} else
+			{
 				System.out.println("第" + (i + 1) + "趟排序");
 			}
-			
-			for (int j = 0; j < arr.length - 1 - i; j++) {
+
+			for (int j = 0; j < arr.length - 1 - i; j++)
+			{
 				System.out.print("第" + (j + 1) + "次比较");
-				if (arr[j] > arr[j + 1]) {
+				if (arr[j] > arr[j + 1])
+				{
 					int temp = arr[j];
 					arr[j] = arr[j + 1];
-					arr[j+1] = temp;
+					arr[j + 1] = temp;
 				}
 				System.out.println(Arrays.toString(arr));
 			}

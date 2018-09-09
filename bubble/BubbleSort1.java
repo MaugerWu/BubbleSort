@@ -56,21 +56,26 @@ public class BubbleSort1 {
 	 * 
 	 * @param arr 数组
 	 */
-	public static void sort(int[] arr) {
-		for (int i = 0; i < arr.length - 1; i++) {
-			if (i != 0) {
+	public static void sort(int[] arr) 
+	{
+		for (int i = 0; i < arr.length - 1; i++)
+		{
+			if (i != 0)
+			{
 				System.out.println("\n第" + (i + 1) + "趟排序");
-			}
-			else {
+			} else
+			{
 				System.out.println("第" + (i + 1) + "趟排序");
 			}
-			
-			for (int j = 0; j < arr.length - 1; j++) {
+
+			for (int j = 0; j < arr.length - 1; j++)
+			{
 				System.out.print("第" + (j + 1) + "次比较");
-				if (arr[j] > arr[j + 1]) {
+				if (arr[j] > arr[j + 1])
+				{
 					int temp = arr[j];
 					arr[j] = arr[j + 1];
-					arr[j+1] = temp;
+					arr[j + 1] = temp;
 				}
 				System.out.println(Arrays.toString(arr));
 			}
